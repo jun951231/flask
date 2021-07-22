@@ -5,13 +5,10 @@ from oop import contacts
 
 
 class MusicRanking(object):
-    domain = ''
-    query_string = ''
-    url = ''
     html = ''
     headers = {'User-Agent': 'Mozilla/5.0'}
-    tag_name = '[]'
-    fname = '[]'
+    tag = ''
+    fname = ''
     class_name = []
     artists = []
     titles = []
@@ -68,13 +65,12 @@ class MusicRanking(object):
         self.df.to_csv(path, sep=',', na_rep='NaN')
 
 
-
 def main():
     # 20210720
     # 16
     mr = MusicRanking()
     while 1:
-        menu = contacts.print_menu(['exit', 'Bugs URL', 'Melon URL', 'Output', 'Print Dict', 'Dict To Dataframe', 'Dataframe to CSV'])
+        menu = contacts.menu2(['exit', 'Bugs URL', 'Melon URL', 'Output', 'Print Dict', 'Dict To Dataframe', 'Dataframe to CSV'])
         # 0-exit, 1-Bugs (input URL), 2-Melon (input URL), 3-output, 4-print dict,
         # 5-dict to dataframe, 6-df to csv
         if menu == 0:

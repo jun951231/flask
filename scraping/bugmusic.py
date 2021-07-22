@@ -48,7 +48,7 @@ def main():
     # 20210720
     # 16
     Bugmusic(f'https://music.bugs.co.kr/chart/track/realtime/total?'
-                    f'chartdate={"20210720"}&charthour={"16"}').scrap()
+                    f'chartdate={"20210722"}&charthour={"16"}').scrap()
 
 
 
