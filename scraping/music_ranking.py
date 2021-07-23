@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
+
+from common.menu import print_menu
 from oop import contacts
 
 
@@ -70,7 +72,7 @@ def main():
     # 16
     mr = MusicRanking()
     while 1:
-        menu = contacts.menu2(['exit', 'Bugs URL', 'Melon URL', 'Output', 'Print Dict', 'Dict To Dataframe', 'Dataframe to CSV'])
+        menu = print_menu(['exit', 'Bugs URL', 'Melon URL', 'Output', 'Print Dict', 'Dict To Dataframe', 'Dataframe to CSV'])
         # 0-exit, 1-Bugs (input URL), 2-Melon (input URL), 3-output, 4-print dict,
         # 5-dict to dataframe, 6-df to csv
         if menu == 0:
