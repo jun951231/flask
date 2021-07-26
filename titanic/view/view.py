@@ -20,6 +20,7 @@ class View(object):
         this.test = service.new_model(test)
         return this
 
+
 if __name__ == '__main__':
     view = View()
     view.modeling('train.csv', 'test.csv')
