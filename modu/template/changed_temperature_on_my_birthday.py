@@ -54,24 +54,16 @@ class ChangedTemperatureOnMyBirthday():
         for i in self.data:
             if i[-1] != '' and i[-2] != '':
                 if 1983 <= int(i[0].split('-')[0]):
-                    if i[0].split('-')[1] =='02' and i[0].split('-')[2] == '14':
+                    if i[0].split('-')[1] == '02' and i[0].split('-')[2] == '14':
                         high.append(float(i[-1]))
                         low.append(float(i[-2]))
-
-        plt.plot(high, 'hotpink')
-        plt.plot(low, 'skyblue')
+        plt.rc('font', family='Malgun Gothic')
+        plt.rcParams['axes.unicode_minus'] = False
+        plt.title('내 생일의 기온 변화 그래프')
+        plt.plot(high, 'hotpink', label='high')
+        plt.plot(low, 'skyblue', label='low')
+        plt.legend()
         plt.show()
-
-
-
-    def extract_date_data(self):
-        pass
-        '''
-        data = self.data
-        extra_date_date = self.visualize_data
-        plt.plot(extra_date_date, 'r')
-        plt.show()
-        '''
 
 
 if __name__ == '__main__':
