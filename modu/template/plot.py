@@ -1,6 +1,6 @@
-from titanic.model.dataset import Dataset
-from titanic.model.service import Service
 import matplotlib.pyplot as plt
+from scraping.models.dataset import Dataset
+from scraping.models.service import Service
 
 
 class Plot(object):
