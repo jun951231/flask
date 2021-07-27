@@ -8,7 +8,6 @@ class Dataset(object):
     bugs: object
     melon: object
 
-
     @property
     def context(self) -> str: return self._context
     @context.setter
